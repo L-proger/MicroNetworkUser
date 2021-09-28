@@ -2,7 +2,7 @@
 
 #include <LFramework/COM/ComObject.h>
 #include <MicroNetwork.Common.h>
-#include <MicroNetwork/Host/INetwork.h>
+#include <MicroNetwork.Host.h>
 
 namespace MicroNetwork::User {
 
