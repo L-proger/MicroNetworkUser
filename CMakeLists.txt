@@ -1,0 +1,3 @@
+add_library(MicroNetworkUser INTERFACE)
+add_subdirectory(Src/MicroNetwork/User)
+target_include_directories(MicroNetworkUser INTERFACE Src)
