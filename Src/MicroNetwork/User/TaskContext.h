@@ -12,9 +12,8 @@ public:
     virtual void onNetworkRelease() {
         _isConnected = false;
     }
-    LFramework::Result isConnected(bool& result) {
-        result = _isConnected;
-        return LFramework::Result::Ok;
+    bool isConnected() {
+        return _isConnected;
     }
 private:
     bool _isConnected = true;
