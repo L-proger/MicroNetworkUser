@@ -1,5 +1,6 @@
 target_sources(MicroNetworkUser
-	INTERFACE
-		TaskContext.h
-		TaskContextConstructor.h
+INTERFACE
+	Link.h
+	AbstractLink.h
+	LinkConstructor.h
 )
