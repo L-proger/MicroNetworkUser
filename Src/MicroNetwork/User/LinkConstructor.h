@@ -32,7 +32,14 @@ public:
             ::create<typename TImplementer::LinkDescriptor::InInterfaceSerializer>(contextNetworkInterface);
 
         //
+
+        auto i0 = contextNetworkInterfaceSerializer->addRef();
+        auto i1 = contextNetworkInterfaceSerializer->release();
         auto networkInterface = network->startTask(node, TImplementer::LinkDescriptor::ID(), contextNetworkInterfaceSerializer);
+
+        auto i2 = contextNetworkInterfaceSerializer->addRef();
+        auto i3 = contextNetworkInterfaceSerializer->release();
+
         if (networkInterface == nullptr) { return {}; }
         taskContext->setDataReceiver(networkInterface);
         return contextUserInterface;
